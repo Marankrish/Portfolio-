@@ -15,7 +15,7 @@ def contact():
         # Send the data via email
         send_email(name, email, message)
 
-        return "Thank you for your message! We'll get back to you soon."
+        return "<h1>Thank you for your message! I'll get back to you soon.</h1>"
 
     return render_template("index.html")  # Your contact form page
 
@@ -23,7 +23,7 @@ def send_email(name, email, message):
     # Replace with your email settings
     sender_email = "marankrishnakumar@gmail.com"
     receiver_email = "marankrishnakumar@gmail.com"
-    password = "mdcineluv12"  # For Gmail, use App Passwords for better security
+    password = "hvvs lppf zfog ctfy"  # For Gmail, use App Passwords for better security
 
     msg = MIMEText(f"Name: {name}\nEmail: {email}\nMessage: {message}")
     msg["Subject"] = "New Contact Form Submission"
