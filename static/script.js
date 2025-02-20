@@ -27,3 +27,8 @@ function eraseText() {
 document.addEventListener("DOMContentLoaded", function() {
     typeText();
 });
+function toggleMenu() {
+    let menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+}
+

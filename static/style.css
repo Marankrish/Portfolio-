@@ -13,6 +13,9 @@
     padding-top: 80px;
    
 }
+.menu-icon {
+    display: none; /* Hide by default */
+}
 nav{
     display: flex;
     align-items: center;
@@ -74,6 +77,9 @@ nav ul li a:hover{
     border-right: 3px solid white; /* Cursor effect */
     padding-right: 5px;
     animation: blink 0.7s infinite;
+    display: inline-block; /* Prevent layout shift */
+    min-width: auto;
+    white-space: nowrap;
 }
 
 @keyframes blink {
@@ -105,6 +111,7 @@ nav ul li a:hover{
     border-radius: 50%; /* Makes image round */
     border: 5px solid palevioletred;
     box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.7);
+    margin-bottom: 20px;
 }
 .resume-btn {
     background-color: palevioletred;
@@ -140,6 +147,7 @@ nav ul li a:hover{
 .about-text {
     flex: 1;
     max-width: 600px;
+    text-align: justify;
 }
 
 .about-text h2 {
@@ -409,4 +417,84 @@ footer#footer {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content {
+        margin-top: 20px;
+    }
+    .prof img {
+        width: 200px; /* Adjust image size for mobile */
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image img {
+        width: 250px; /* Adjust image size for mobile */
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill {
+        width: 80%; /* Adjust width for mobile */
+    }
+}
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+}
+@media screen and (max-width: 768px) {
+    .container2 {
+        width: 90%; /* Adjust width for mobile */
+    }
+@media screen and (max-width: 768px) {
+    .contact-info {
+            flex-direction: column; /* Stack items vertically on mobile */
+            gap: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+}
+@media screen and (max-width: 768px) {
+    #typing-text {
+        min-width: 240px;
+        border: none; /* Adjust width for mobile */
+    }
+}
 }
