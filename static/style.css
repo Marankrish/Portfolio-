@@ -488,7 +488,6 @@ footer#footer {
             flex-direction: column; /* Stack items vertically on mobile */
             gap: 10px;
             text-align: center;
-            font-size: 20px;
         }
 }
 @media screen and (max-width: 768px) {
